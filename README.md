@@ -1,5 +1,7 @@
 # Fall2020_CSC403_Project
 
+See Wiki for details.
+
 Added Features:
 
 - MainMenu Class:
