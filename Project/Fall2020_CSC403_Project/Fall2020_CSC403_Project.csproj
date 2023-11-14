@@ -54,6 +54,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharacterSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterSelection.Designer.cs">
+      <DependentUpon>CharacterSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeathScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CharacterSelection.resx">
+      <DependentUpon>CharacterSelection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeathScreen.resx">
       <DependentUpon>DeathScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +176,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -228,6 +242,7 @@
     <None Include="data\raw images\LVL1potion0.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="data\baby_nut.png" />
     <Content Include="data\blackbackground.png" />
     <Content Include="data\deathscreen.png" />
     <None Include="Resources\Potion.bmp" />
@@ -236,9 +251,9 @@
     <None Include="data\grass_wall.jpg" />
     <None Include="data\shield.png" />
     <None Include="data\background_dark.png" />
-    <Content Include="data\baby nut2.png" />
     <Content Include="data\minecraft-door.jpeg" />
     <None Include="data\raw images\Potion.png" />
+    <Content Include="data\raw images\baby_nut.png" />
     <Content Include="grass_wall.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

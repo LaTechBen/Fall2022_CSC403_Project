@@ -10,6 +10,7 @@ namespace Fall2020_CSC403_Project
     public partial class FrmLevel : Form
     {
         private Player player;
+        private string characterselection;
         const int PADDING = 7;
 
         private Enemy enemyPoisonPacket;
@@ -30,9 +31,11 @@ namespace Fall2020_CSC403_Project
         Vector2 poisonArrowDirection;
         private bool showLevel;
 
-        public FrmLevel()
+        public FrmLevel(string selection)
         {
             InitializeComponent();
+            characterselection = selection;
+
         }
 
 
@@ -41,7 +44,7 @@ namespace Fall2020_CSC403_Project
             const int ARROW_PADDING = 2;
             const int NUM_WALLS = 13;
 
-            player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING), 1.0f);
+            player = new Player(CreatePosition(characterSelected(characterselection)), CreateCollider(characterSelected(characterselection), PADDING), 1.0f);
             bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING), 0.25f);
             enemyList = new List<Enemy>();
             enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), 0.5f);
@@ -122,6 +125,18 @@ namespace Fall2020_CSC403_Project
             showLevel = true;
             Game.player = player;
             timeBegin = DateTime.Now;
+        }
+
+        private PictureBox characterSelected(string selection)
+        {
+            if (selection == "mrpeanut")
+            {
+                return picPlayer;
+            }
+            else
+            {
+                return picPlayer2;
+            }
         }
 
         private Vector2 CreatePosition(PictureBox pic)
@@ -310,7 +325,8 @@ namespace Fall2020_CSC403_Project
             Rectangle rect = new Rectangle(pic.Location, new Size(pic.Size.Width - padding, pic.Size.Height - padding));
             return new Collider(rect);
         }
-    private void FrmLevel_KeyUp(object sender, KeyEventArgs e)
+
+        private void FrmLevel_KeyUp(object sender, KeyEventArgs e)
     {
         player.ResetMoveSpeed();
 
