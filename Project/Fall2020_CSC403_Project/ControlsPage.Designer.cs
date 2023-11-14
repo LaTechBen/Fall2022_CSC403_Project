@@ -55,7 +55,7 @@ namespace Fall2020_CSC403_Project
             this.btnCloseControls.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseControls.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnCloseControls.ForeColor = System.Drawing.Color.White;
-            this.btnCloseControls.Location = new System.Drawing.Point(327, 254);
+            this.btnCloseControls.Location = new System.Drawing.Point(327, 294);
             this.btnCloseControls.Name = "btnCloseControls";
             this.btnCloseControls.Size = new System.Drawing.Size(140, 51);
             this.btnCloseControls.TabIndex = 1;
@@ -81,9 +81,10 @@ namespace Fall2020_CSC403_Project
             this.lblControl3.ForeColor = System.Drawing.Color.White;
             this.lblControl3.Location = new System.Drawing.Point(129, 173);
             this.lblControl3.Name = "lblControl3";
-            this.lblControl3.Size = new System.Drawing.Size(562, 28);
+            this.lblControl3.Size = new System.Drawing.Size(567, 84);
             this.lblControl3.TabIndex = 3;
-            this.lblControl3.Text = "SpaceBar: Shoots a projectile in the direction of last movement.";
+            this.lblControl3.Text = "SpaceBar: Shoots a projectile in the direction of last movement. \n\nB: To Activate" +
+    " Shield";
             // 
             // ControlsPage
             // 
