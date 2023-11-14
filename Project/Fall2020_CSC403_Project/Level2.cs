@@ -15,6 +15,7 @@ namespace Fall2020_CSC403_Project
         private Enemy bossKoolaid2;
         private Enemy enemyCheeto2;
         private Projectile arrow2;
+        private Sword pacifier;
         private Character[] walls2;
         public string playerDirection = "right";
         private List<Item> itemsList2;
@@ -34,6 +35,7 @@ namespace Fall2020_CSC403_Project
             const int NUM_WALLS = 13;
 
             player2 = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING), 1.0f);
+            player2.image = picPlayer.BackgroundImage;
             bossKoolaid2 = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING), 0.25f);
             enemyPoisonPacket2 = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), 0.5f);
             enemyCheeto2 = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING), 0.5f);
@@ -41,6 +43,8 @@ namespace Fall2020_CSC403_Project
             // character projectile attack
             arrow2 = new Projectile(CreatePosition(picPlayer), CreateCollider(picArrow2, ARROW_PADDING));
             picArrow2.Hide();
+            pacifier = new Sword(CreatePosition(picPacifier), CreateCollider(picPacifier, PADDING));
+            picPacifier.Image = RotateImage(picPacifier.Image, pacifier.calcPointDirection(enemyCheeto2, player2));
             bossKoolaid2.Img = picBossKoolAid.BackgroundImage;
             enemyPoisonPacket2.Img = picEnemyPoisonPacket.BackgroundImage;
             enemyCheeto2.Img = picEnemyCheeto.BackgroundImage;
@@ -207,8 +211,14 @@ namespace Fall2020_CSC403_Project
                 StoreItem(itemHit);
             }
 
-            // update player's picture box
+            // update player's picture box, health bar, and health
             picPlayer.Location = new Point((int)player2.Position.x, (int)player2.Position.y);
+            playerHealthBar.Location = new Point((int)player2.Position.x, (int)player2.Position.y);
+            //picShield.Location = new Point((int)player2.Position.x + 54, (int)player2.Position.y + 15);
+            UpdatePlayerHealthBars(player2);
+            float angle = pacifier.calcPointDirection(enemyCheeto2, player2);
+            picPacifier.Image = RotateImage(picPacifier.Image, angle);
+            picPacifier.Location = new Point((int)player2.Position.x + (player2.image.Width / 2), (int)player2.Position.y + (player2.image.Height / 2));
         }
 
         /// <summary>
@@ -634,6 +644,36 @@ namespace Fall2020_CSC403_Project
         //    const int MAX_HEALTHBAR_WIDTH = 196;
         //    bossHealthBar.Width = (int)(MAX_HEALTHBAR_WIDTH * enemyHealthPer);
         //}
+
+        public Image RotateImage(Image img, float rotationAngle)
+        {
+            //create an empty Bitmap image
+            Bitmap bmp = new Bitmap(img.Width, img.Height);
+
+            //turn the Bitmap into a Graphics object
+            Graphics gfx = Graphics.FromImage(bmp);
+
+            //now we set the rotation point to the center of our image
+            //gfx.TranslateTransform((float)bmp.Width / 2, (float)bmp.Height / 2);
+
+            //now rotate the image
+            gfx.RotateTransform(rotationAngle);
+
+            //gfx.TranslateTransform(-(float)bmp.Width / 2, -(float)bmp.Height / 2);
+
+            //set the InterpolationMode to HighQualityBicubic so to ensure a high
+            //quality image once it is transformed to the specified size
+            gfx.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+
+            //now draw our new image onto the graphics object
+            gfx.DrawImage(img, new Point(0, 0));
+
+            //dispose of our Graphics object
+            gfx.Dispose();
+
+            //return the image
+            return bmp;
+        }
     } 
 }
 

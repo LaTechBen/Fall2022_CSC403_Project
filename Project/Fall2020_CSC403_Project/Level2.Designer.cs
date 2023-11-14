@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Level2));
             this.lblInGameTime = new System.Windows.Forms.Label();
             this.tmrUpdateInGameTime = new System.Windows.Forms.Timer(this.components);
             this.tmrPlayerMove = new System.Windows.Forms.Timer(this.components);
@@ -58,6 +59,7 @@
             this.poisonHealthBar = new System.Windows.Forms.Label();
             this.playerHealthBar = new System.Windows.Forms.Label();
             this.cheetoHealthBar = new System.Windows.Forms.Label();
+            this.picPacifier = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryboard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LVL1potion0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPacifier)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInGameTime
@@ -402,6 +405,17 @@
             this.cheetoHealthBar.Size = new System.Drawing.Size(91, 16);
             this.cheetoHealthBar.TabIndex = 24;
             // 
+            // picPacifier
+            // 
+            this.picPacifier.BackColor = System.Drawing.Color.Transparent;
+            this.picPacifier.Image = ((System.Drawing.Image)(resources.GetObject("picPacifier.Image")));
+            this.picPacifier.Location = new System.Drawing.Point(1458, 132);
+            this.picPacifier.Name = "picPacifier";
+            this.picPacifier.Size = new System.Drawing.Size(48, 48);
+            this.picPacifier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPacifier.TabIndex = 25;
+            this.picPacifier.TabStop = false;
+            // 
             // Level2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -416,7 +430,6 @@
             this.Controls.Add(this.selector);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picWall11);
-            this.Controls.Add(this.picWall2);
             this.Controls.Add(this.picWall8);
             this.Controls.Add(this.picWall7);
             this.Controls.Add(this.lblInGameTime);
@@ -435,6 +448,8 @@
             this.Controls.Add(this.picPlayer);
             this.Controls.Add(this.LVL1potion0);
             this.Controls.Add(this.picArrow2);
+            this.Controls.Add(this.picPacifier);
+            this.Controls.Add(this.picWall2);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Level2";
@@ -465,6 +480,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LVL1potion0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPacifier)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -501,5 +517,6 @@
         private System.Windows.Forms.Label poisonHealthBar;
         private System.Windows.Forms.Label playerHealthBar;
         private System.Windows.Forms.Label cheetoHealthBar;
+        private System.Windows.Forms.PictureBox picPacifier;
     }
 }
