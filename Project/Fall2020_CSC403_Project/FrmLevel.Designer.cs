@@ -414,6 +414,18 @@
             this.picPlayer.TabIndex = 0;
             this.picPlayer.TabStop = false;
             // 
+            // picPlayer2
+            // 
+            this.picPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.baby_nut;
+            this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picPlayer.Location = new System.Drawing.Point(159, 628);
+            this.picPlayer.Margin = new System.Windows.Forms.Padding(4);
+            this.picPlayer.Name = "picPlayer2";
+            this.picPlayer.Size = new System.Drawing.Size(72, 130);
+            this.picPlayer.TabIndex = 0;
+            this.picPlayer.TabStop = false;
+            // 
             // picArrow
             // 
             this.picArrow.BackColor = System.Drawing.Color.Transparent;
@@ -522,6 +534,7 @@
             this.Controls.Add(this.picPoisonArrow);
             this.Controls.Add(this.picCheetoArrow);
             this.Controls.Add(this.picPlayer);
+            this.Controls.Add(this.picPlayer2);
             this.Controls.Add(this.bossHealthBar);
             this.Controls.Add(this.cheetoHealthBar);
             this.Controls.Add(this.playerHealthBar);
@@ -576,6 +589,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayer2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArrow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LVL1potion0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LVL1potion1)).EndInit();
@@ -592,6 +606,7 @@
     #endregion
 
     private System.Windows.Forms.PictureBox picPlayer;
+    private System.Windows.Forms.PictureBox picPlayer2;
     private System.Windows.Forms.PictureBox picBossKoolAid;
     private System.Windows.Forms.Label lblInGameTime;
     private System.Windows.Forms.Timer tmrUpdateInGameTime;
