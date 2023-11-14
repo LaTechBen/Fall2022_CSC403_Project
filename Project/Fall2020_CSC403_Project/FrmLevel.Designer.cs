@@ -57,6 +57,7 @@
             this.picWall3 = new System.Windows.Forms.PictureBox();
             this.picBossKoolAid = new System.Windows.Forms.PictureBox();
             this.picPlayer = new System.Windows.Forms.PictureBox();
+            this.picPlayer2 = new System.Windows.Forms.PictureBox();
             this.picArrow = new System.Windows.Forms.PictureBox();
             this.LVL1potion0 = new System.Windows.Forms.PictureBox();
             this.LVL1potion1 = new System.Windows.Forms.PictureBox();
@@ -84,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LVL1potion0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LVL1potion1)).BeginInit();
@@ -405,7 +407,7 @@
             // picPlayer
             // 
             this.picPlayer.BackColor = System.Drawing.Color.Transparent;
-            this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player;
+            this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.baby_nut;
             this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picPlayer.Location = new System.Drawing.Point(159, 628);
             this.picPlayer.Margin = new System.Windows.Forms.Padding(4);
@@ -416,15 +418,13 @@
             // 
             // picPlayer2
             // 
-            this.picPlayer.BackColor = System.Drawing.Color.Transparent;
-            this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.baby_nut;
-            this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picPlayer.Location = new System.Drawing.Point(159, 628);
-            this.picPlayer.Margin = new System.Windows.Forms.Padding(4);
-            this.picPlayer.Name = "picPlayer2";
-            this.picPlayer.Size = new System.Drawing.Size(72, 130);
-            this.picPlayer.TabIndex = 0;
-            this.picPlayer.TabStop = false;
+            this.picPlayer2.Image = global::Fall2020_CSC403_Project.Properties.Resources.player;
+            this.picPlayer2.Location = new System.Drawing.Point(160, 629);
+            this.picPlayer2.Name = "picPlayer2";
+            this.picPlayer2.Size = new System.Drawing.Size(72, 129);
+            this.picPlayer2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPlayer2.TabIndex = 26;
+            this.picPlayer2.TabStop = false;
             // 
             // picArrow
             // 
@@ -483,7 +483,7 @@
             this.ItemPoisonPack.Location = new System.Drawing.Point(176, 175);
             this.ItemPoisonPack.Margin = new System.Windows.Forms.Padding(5);
             this.ItemPoisonPack.Name = "ItemPoisonPack";
-            this.ItemPoisonPack.Size = new System.Drawing.Size(168, 227);
+            this.ItemPoisonPack.Size = new System.Drawing.Size(84, 118);
             this.ItemPoisonPack.TabIndex = 23;
             this.ItemPoisonPack.TabStop = false;
             // 

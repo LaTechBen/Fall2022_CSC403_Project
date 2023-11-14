@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Fall2020_CSC403_Project.data;
 
 namespace Fall2020_CSC403_Project
 {
@@ -70,10 +71,10 @@ namespace Fall2020_CSC403_Project
         private void continue_Click(object sender, EventArgs e)
         {
             // Create FrmLevel and show it
-            FrmLevel frm = new FrmLevel();
+            CharacterSelection frm = new CharacterSelection();
             frm.Show();
             // Whenever FrmLevel is closed, execute onFormClosed method
-            frm.FormClosed += frm.onFormClosed;
+            //frm.FormClosed += frm.onFormClosed;
             Hide();
         }
     }

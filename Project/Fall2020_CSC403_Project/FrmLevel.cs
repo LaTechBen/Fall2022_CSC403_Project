@@ -26,6 +26,7 @@ namespace Fall2020_CSC403_Project
         private FrmBattle frmBattle;
         private List<Item> itemsList;
         private List<Enemy> enemyList;
+        private PictureBox player_img;
         private int rng;
         Vector2 cheetoArrowDirection;
         Vector2 poisonArrowDirection;
@@ -44,7 +45,8 @@ namespace Fall2020_CSC403_Project
             const int ARROW_PADDING = 2;
             const int NUM_WALLS = 13;
 
-            player = new Player(CreatePosition(characterSelected(characterselection)), CreateCollider(characterSelected(characterselection), PADDING), 1.0f);
+            this.player_img = characterSelected(characterselection);
+            player = new Player(CreatePosition(this.player_img), CreateCollider(this.player_img, PADDING), 1.0f);
             bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING), 0.25f);
             enemyList = new List<Enemy>();
             enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), 0.5f);
@@ -56,7 +58,7 @@ namespace Fall2020_CSC403_Project
 
 
             // character projectile attack
-            arrow = new Projectile(CreatePosition(picPlayer), CreateCollider(picArrow, ARROW_PADDING));
+            arrow = new Projectile(CreatePosition(this.player_img), CreateCollider(picArrow, ARROW_PADDING));
             picArrow.Hide();
 
             // cheeto projectile attack
@@ -131,11 +133,13 @@ namespace Fall2020_CSC403_Project
         {
             if (selection == "mrpeanut")
             {
-                return picPlayer;
+                picPlayer.Hide();
+                return picPlayer2;
             }
             else
             {
-                return picPlayer2;
+                picPlayer2.Hide();
+                return picPlayer;
             }
         }
 
@@ -314,7 +318,7 @@ namespace Fall2020_CSC403_Project
             }
 
             // update player's picture box, health bar, and health
-            picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y + 15);
+            this.player_img.Location = new Point((int)player.Position.x, (int)player.Position.y + 15);
             playerHealthBar.Location = new Point((int)player.Position.x, (int)player.Position.y);
             picShield.Location = new Point((int)player.Position.x + 54, (int)player.Position.y + 15);
             UpdatePlayerHealthBars(player);
@@ -547,7 +551,7 @@ namespace Fall2020_CSC403_Project
                 }
             }
             // update player's picture box
-            picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y + 15);
+            this.player_img.Location = new Point((int)player.Position.x, (int)player.Position.y + 15);
             playerHealthBar.Location = new Point((int)player.Position.x, (int)player.Position.y);
             picShield.Location = new Point((int)player.Position.x + 54, (int)player.Position.y + 15);
         }

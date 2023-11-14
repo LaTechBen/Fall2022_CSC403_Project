@@ -63,9 +63,23 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arrow_100_40_horizontal {
-            get {
+        internal static System.Drawing.Bitmap arrow_100_40_horizontal
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("arrow_100_40_horizontal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baby_nut
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("baby_nut", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
