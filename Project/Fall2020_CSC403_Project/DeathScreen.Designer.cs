@@ -57,12 +57,17 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(285, 344);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(251, 344);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(203, 38);
+            this.button1.Size = new System.Drawing.Size(286, 38);
             this.button1.TabIndex = 2;
             this.button1.Text = "Return To Main Menu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DeathScreen

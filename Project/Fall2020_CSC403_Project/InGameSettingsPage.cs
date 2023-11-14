@@ -13,9 +13,11 @@ namespace Fall2020_CSC403_Project
 {
     public partial class InGameSettingsPage : Form
     {
+       
         public InGameSettingsPage()
         {
             InitializeComponent();
+        
         }
 
         private void btnCloseSettings_Click(object sender, EventArgs e)
@@ -52,6 +54,12 @@ namespace Fall2020_CSC403_Project
         private void btnVolume_Click(object sender, EventArgs e)
         {
             ToggleVolume();
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+         
         }
     }
 }

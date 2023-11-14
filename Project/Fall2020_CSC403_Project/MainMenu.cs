@@ -31,14 +31,12 @@ namespace Fall2020_CSC403_Project
         /// Method to start the game 
         /// </summary>
         private void startButtonClick(object sender, EventArgs e)
-        {   
-            // Create FrmLevel and show it
-            FrmLevel frm = new FrmLevel();
-            frm.Show();
-            // Whenever FrmLevel is closed, execute onFormClosed method
-            frm.FormClosed += frm.onFormClosed;
-            music.Stop();
+        {
+
+            Intro intro = new Intro();
+            intro.Show();
             Hide();
+            music.Stop();
 
         }
 
@@ -48,6 +46,7 @@ namespace Fall2020_CSC403_Project
         private void quitButtonClick(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+            Close();
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
